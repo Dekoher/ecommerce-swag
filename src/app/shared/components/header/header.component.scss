@@ -1,8 +1,17 @@
-nav a {
-  padding: 5px;
-  text-decoration: none;
-}
+.navbar {
+  display: flex; 
+  justify-content: space-between;
 
-nav .active {
-  background-color: #000;
+  nav a {
+    padding: 5px;
+    text-decoration: none;
+  }
+  
+  nav .active {
+    background-color: #000;
+  }
+
+  .cartbutton {
+    margin-right: 16px;
+  }
 }
