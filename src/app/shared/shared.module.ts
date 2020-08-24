@@ -8,6 +8,8 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 
+import { MaterialModule } from '../material/material.module';
+
 @NgModule({
   declarations: [
     ExponentialPipe,
@@ -26,6 +28,7 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
   imports: [
     CommonModule,
     RouterModule,
+    MaterialModule,
   ]
 })
 export class SharedModule { }
