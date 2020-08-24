@@ -9,7 +9,7 @@ import {
   DoCheck,
   OnDestroy,
 } from '@angular/core';
-import { Product } from '../../pages/products/product.model';
+import { Product } from '../../../products/components/products/product.model';
 import { getLocaleFirstDayOfWeek } from '@angular/common';
 
 @Component({
