@@ -1,43 +1,15 @@
-:host {
-  border: 1px solid #000;
-  border-radius: 5px;
-  display: block;
-  margin-bottom: 1rem;
-}
 
-img {
-  max-width: 100%;
-}
-
-@media (min-width: 576px) {
-  :host {
-    margin-right: 1rem;
-    margin-bottom: 1rem;
-  }
-
-  :host:nth-child(2n) {
-    margin-right: 0;
-  }
-}
-
-@media (min-width: 768px) {
-  :host {
-    margin-right: 1rem;
-    margin-bottom: 1rem;
-  }
-
-  :host:nth-child(3n) {
-    margin-right: 0;
-  }
-}
-
-@media (min-width: 1024px) {
-  :host {
-    margin-right: 1rem;
-    margin-bottom: 1rem;
-  }
+.crop-image {
+  height: 300px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
   
-  :host:nth-child(4n) {
-    margin-right: 0;
+  img {
+    max-width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 }
