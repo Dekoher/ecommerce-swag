@@ -5,7 +5,14 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatBadgeModule } from '@angular/material/badge';
+import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
+import { MatRadioModule } from '@angular/material/radio';
 import { MatCardModule } from '@angular/material/card';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatListModule } from '@angular/material/list';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatMenuModule } from '@angular/material/menu';
 
 @NgModule({
   declarations: [],
@@ -16,6 +23,17 @@ import { MatCardModule } from '@angular/material/card';
     MatIconModule,
     MatBadgeModule,
     MatCardModule,
+    MatInputModule,
+    MatSelectModule,
+    MatRadioModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatListModule,
+    MatGridListModule,
+    MatCardModule,
+    MatMenuModule,
   ],
   exports: [
     MatButtonModule,
@@ -23,6 +41,17 @@ import { MatCardModule } from '@angular/material/card';
     MatIconModule,
     MatBadgeModule,
     MatCardModule,
+    MatInputModule,
+    MatSelectModule,
+    MatRadioModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatListModule,
+    MatGridListModule,
+    MatCardModule,
+    MatMenuModule,
   ],
 })
 export class MaterialModule {}
