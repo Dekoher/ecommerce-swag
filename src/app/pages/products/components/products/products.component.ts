@@ -64,7 +64,17 @@ export class ProductsComponent implements OnInit {
 
   fetchProducts(): void {
     this.productService.getAllProducts().subscribe(products => {
-      this.products = products;
+      const newArr = [];
+      products.forEach(element => {
+        newArr.push({
+          ...element,
+          image: 'assets/img/Javascript-Stickers-Mugs.jpg',
+          title: `${element.title.slice(0, 18)}${element.title.length > 17 ? '...' : ''}`,
+          description: element.description || 'Descripción no diponible',
+        });
+      });
+      console.log(newArr);
+      this.products = newArr;
     });
   }
 }
