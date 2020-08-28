@@ -9,8 +9,8 @@ import {
   DoCheck,
   OnDestroy,
 } from '@angular/core';
-import { Product } from '../../../products/components/products/product.model';
-import { getLocaleFirstDayOfWeek } from '@angular/common';
+import { Product } from '../../../../core/models/product.model';
+import { CartService } from '../../../../core/services/cart/cart.service';
 
 @Component({
   selector: 'product',
@@ -22,7 +22,7 @@ export class ProductComponent implements OnInit, DoCheck, OnDestroy {
   @Output() addProductToCart: EventEmitter<any> = new EventEmitter();
 
   date  = new Date();
-  constructor() {
+  constructor(private cartService: CartService) {
     // console.log('constructor');
   }
 
@@ -44,6 +44,7 @@ export class ProductComponent implements OnInit, DoCheck, OnDestroy {
 
   addToCart(): void {
     console.log('added');
-    this.addProductToCart.emit(this.product.id);
+    this.cartService.addToCart(this.product);
+    // this.addProductToCart.emit(this.product.id);
   }
 }
