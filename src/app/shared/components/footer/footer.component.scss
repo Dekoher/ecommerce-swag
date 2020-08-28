@@ -1,0 +1,12 @@
+.footer-container {
+  width: 100%;
+  height: 20vh;
+  background-color: #3f51b5;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 50px 20px;
+
+  .firstcolumn, .secondcolumn {
+    padding: 5%;
+  }
+}
