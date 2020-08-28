@@ -1,0 +1,15 @@
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .card {
+    width: 50%;
+    margin-top: 5%;
+
+    .container-inputs {
+      display: flex;
+      flex-flow: column;
+    }
+  }
+}
