@@ -67,13 +67,13 @@ export class ProductsComponent implements OnInit {
       const newArr = [];
       products.forEach(element => {
         newArr.push({
-          ...element,
+          id: element.id,
           image: 'assets/img/Javascript-Stickers-Mugs.jpg',
-          title: `${element.title.slice(0, 18)}${element.title.length > 17 ? '...' : ''}`,
+          title: element.title ? `${element.title.slice(0, 18)}${element.title.length > 17 ? '...' : ''}` : 'No disponible',
+          price: element.price || 0,
           description: element.description || 'Descripción no diponible',
         });
       });
-      console.log(newArr);
       this.products = newArr;
     });
   }
