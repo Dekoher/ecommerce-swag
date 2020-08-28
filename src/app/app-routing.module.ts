@@ -27,14 +27,24 @@ const routes: Routes = [
         loadChildren: () => import('./pages/products/products.module').then(m => m.ProductsModule)
       },
       {
+        path: 'order',
+        loadChildren: () => import('./pages/order/order.module').then(m => m.OrderModule)
+      },
+      {
         path: 'contact',
         canActivate: [AdminGuard],
         component: ContactComponent
       },
     ],
   },
-  { path: 'admin', loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule) },
-  { path: '**', component: NotFoundComponent },
+  {
+    path: 'admin',
+    loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule)
+  },
+  {
+    path: '**',
+    component: NotFoundComponent
+  },
 ];
 
 @NgModule({
