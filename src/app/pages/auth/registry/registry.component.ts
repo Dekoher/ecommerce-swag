@@ -1,0 +1,40 @@
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { AuthService } from '../../../core/services/auth/auth.service';
+
+@Component({
+  selector: 'app-registry',
+  templateUrl: './registry.component.html',
+  styleUrls: ['./registry.component.scss'],
+})
+export class RegistryComponent implements OnInit {
+  form: FormGroup;
+
+  constructor(
+    private formBuilder: FormBuilder,
+    private router: Router,
+    private authService: AuthService
+  ) {
+    this.buildForm();
+  }
+
+  ngOnInit() {}
+
+  registry(event: Event) {
+    event.preventDefault();
+    if (this.form.valid) {
+      const value = this.form.value;
+      this.authService.createUser(value.email, value.password).then(() => {
+        this.router.navigate(['/auth/login']);
+      });
+    }
+  }
+
+  private buildForm() {
+    this.form = this.formBuilder.group({
+      email: ['', [Validators.required]],
+      password: ['', [Validators.required]],
+    });
+  }
+}
