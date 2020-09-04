@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "ecommerce-swag": {
+      "hosting": {
+        "ecommerce-diegoher": [
+          "ecommerce-swag"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "ecommerce-swag"
+  }
+}
